@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <h2>Accedi</h2>
+  <form onsubmit="checkLogin(event)">
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button type="submit">Login</button>
+  </form>
+  <p id="message"></p>
+
+  <script>
+    function checkLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+
+      // Cambia qui le credenziali
+      if (user === "Luanasuca1" && pass === "pipistrello") {
+        window.location.href = "download.html";
+      } else {
+        document.getElementById("message").innerText = "Accesso negato!";
+      }
+    }
+  </script>
+</body>
+</html>
